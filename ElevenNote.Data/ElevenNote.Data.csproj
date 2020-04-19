@@ -84,6 +84,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
+    <Compile Include="Migrations\202004161838293_InitialCreate.cs" />
+    <Compile Include="Migrations\202004161838293_InitialCreate.Designer.cs">
+      <DependentUpon>202004161838293_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004192217560_CategoryMigration.cs" />
+    <Compile Include="Migrations\202004192217560_CategoryMigration.Designer.cs">
+      <DependentUpon>202004192217560_CategoryMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -91,6 +101,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202004161838293_InitialCreate.resx">
+      <DependentUpon>202004161838293_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004192217560_CategoryMigration.resx">
+      <DependentUpon>202004192217560_CategoryMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
